@@ -2,8 +2,6 @@
 
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 
 /* CSS Reset */
 *,
@@ -33,56 +31,40 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
-  letter-spacing: -0.025em;
 }
 
 h1 {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-lg);
 }
 
 h2 {
   font-size: var(--font-size-3xl);
-  margin-bottom: var(--spacing-lg);
 }
 
 h3 {
   font-size: var(--font-size-2xl);
-  margin-bottom: var(--spacing-md);
 }
 
 h4 {
   font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-md);
 }
 
 h5 {
   font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-sm);
 }
 
 h6 {
   font-size: var(--font-size-base);
-  margin-bottom: var(--spacing-sm);
 }
 
 p {
   margin-bottom: var(--spacing-md);
   color: var(--color-gray-dark);
-  line-height: var(--line-height-relaxed);
-  max-width: 65ch;
-}
-
-p.lead {
-  font-size: var(--font-size-lg);
-  color: var(--color-gray);
-  font-weight: var(--font-weight-light);
 }
 
 a {
