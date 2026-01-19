@@ -1,0 +1,77 @@
+/* CSS Variables - MI Nurul Falah */
+:root {
+  /* Colors - Islamic Theme (Green & Yellow) */
+  --color-primary: #2d5016;
+  --color-primary-light: #4a7c2a;
+  --color-primary-dark: #1a3009;
+  
+  --color-secondary: #f4e04d;
+  --color-secondary-light: #f8ec7d;
+  --color-secondary-dark: #e0c926;
+  
+  --color-accent: #8fb568;
+  --color-accent-light: #b3d08c;
+  
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-gray-light: #f8f9fa;
+  --color-gray: #6c757d;
+  --color-gray-dark: #343a40;
+  --color-black: #000000;
+  
+  /* Typography */
+  --font-family-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-secondary: 'Georgia', serif;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Breakpoints */
+  --breakpoint-mobile: 767px;
+  --breakpoint-tablet: 1023px;
+  --breakpoint-desktop: 1024px;
+  
+  /* Container */
+  --container-max-width: 1200px;
+  --container-padding: var(--spacing-md);
+}

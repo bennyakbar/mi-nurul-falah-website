@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - MI Nurul Falah</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>MI Nurul Falah</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="akademik.html">Akademik</a></li>
+                <li><a href="ppdb.html">PPDB</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>Kontak Kami</h1>
+            <p>Hubungi MI Nurul Falah untuk informasi lebih lanjut</p>
+        </section>
+
+        <section class="contact-info">
+            <h2>Informasi Kontak</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <span>📍</span>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Alamat</h3>
+                        <p>Jl. Contoh No. 123<br>Kelurahan Contoh<br>Kecamatan Contoh<br>Kota Contoh 12345</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <span>📞</span>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Telepon</h3>
+                        <p>(021) 123-4567<br>(021) 765-4321</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <span>📱</span>
+                    </div>
+                    <div class="contact-details">
+                        <h3>WhatsApp</h3>
+                        <p>0812-3456-7890 (Admin)<br>0813-9876-5432 (PPDB)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <span>✉️</span>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>info@minurulfalah.sch.id<br>ppdb@minurulfalah.sch.id</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Kirim Pesan</h2>
+            <p>Isi formulir di bawah ini untuk mengirimkan pesan kepada kami</p>
+            <form class="form">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subjek *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Pilih Subjek</option>
+                        <option value="informasi">Informasi Umum</option>
+                        <option value="ppdb">Pendaftaran Siswa Baru</option>
+                        <option value="kerjasama">Kerjasama</option>
+                        <option value="keluhan">Keluhan & Saran</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Kirim Pesan</button>
+            </form>
+        </section>
+
+        <section class="office-hours">
+            <h2>Jam Operasional</h2>
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <h3>Senin - Kamis</h3>
+                    <p>07:00 - 15:00</p>
+                </div>
+                <div class="hours-item">
+                    <h3>Jumat</h3>
+                    <p>07:00 - 14:00</p>
+                </div>
+                <div class="hours-item">
+                    <h3>Sabtu</h3>
+                    <p>08:00 - 12:00</p>
+                </div>
+                <div class="hours-item">
+                    <h3>Minggu & Hari Libur</h3>
+                    <p>Tutup</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="location">
+            <h2>Lokasi Kami</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <p>Peta lokasi MI Nurul Falah</p>
+                    <p>Google Maps akan diintegrasikan di sini</p>
+                </div>
+            </div>
+            <div class="directions">
+                <h3>Petunjuk Arah</h3>
+                <ul>
+                    <li>Dari arah utara: Ikuti Jalan Raya Utama, belok kiri di perempatan ketiga</li>
+                    <li>Dari arah selatan: Lurus di Jalan Raya Selatan, belok kanan setelah pom bensin</li>
+                    <li>Dari arah timur: Ambil jalan bypass, keluar di gerbang tol terdekat</li>
+                    <li>Dari arah barat: Ikuti jalan lingkar, ambil exit ke pusat kota</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="social-media">
+            <h2>Ikuti Kami</h2>
+            <p>Dapatkan informasi terbaru melalui media sosial kami</p>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <span>📘</span>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span>📷</span>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span>📹</span>
+                    <span>YouTube</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span>🐦</span>
+                    <span>Twitter</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MI Nurul Falah</h3>
+                <p>Mendidik dengan hati, membimbing dengan ilmu</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <p>Alamat: Jl. Contoh No. 123, Kota</p>
+                <p>Telepon: (021) 123-4567</p>
+                <p>WhatsApp: 0812-3456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Link Cepat</h4>
+                <ul>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="akademik.html">Akademik</a></li>
+                    <li><a href="ppdb.html">PPDB</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MI Nurul Falah. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/form.js"></script>
+</body>
+</html>
