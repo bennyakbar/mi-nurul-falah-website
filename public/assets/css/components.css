@@ -10,7 +10,28 @@
 
 .highlight-cards .card {
   text-align: center;
-  border-top: 4px solid var(--color-primary);
+  border: none;
+  position: relative;
+}
+
+.highlight-cards .card::after {
+  content: "";
+  position: absolute;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: all 0.3s ease;
+}
+
+.highlight-cards .card:hover::after {
+  width: 80px;
+  height: 80px;
+  opacity: 0.2;
 }
 
 /* News Preview */

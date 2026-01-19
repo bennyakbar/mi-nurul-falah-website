@@ -1,0 +1,109 @@
+/* Header and Footer Visual Polish Only - MI Nurul Falah */
+
+/* Header Visual Polish */
+header {
+  background: linear-gradient(to bottom, #fdfdfd 0%, #fafdf7 100%);
+  border-bottom: 2px solid rgba(45, 80, 22, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* Logo Visual Polish */
+.logo h1 {
+  color: var(--color-primary-dark);
+  text-shadow: 0 1px 2px rgba(45, 80, 22, 0.1);
+}
+
+/* Navigation Visual Polish */
+nav {
+  background-color: transparent;
+}
+
+.nav-menu {
+  background-color: transparent;
+}
+
+.nav-menu a {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--text-secondary);
+}
+
+.nav-menu a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary-dark);
+}
+
+.nav-menu a.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary-dark);
+}
+
+/* Hamburger Visual Polish */
+.hamburger span {
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* Footer Visual Polish */
+footer {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+  border-top: 3px solid var(--color-accent);
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer Content Visual Polish */
+.footer-content {
+  background-color: transparent;
+}
+
+.footer-section {
+  background-color: transparent;
+}
+
+.footer-section h3 {
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 8px;
+}
+
+.footer-section h4 {
+  color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 4px;
+}
+
+.footer-section p {
+  color: var(--color-secondary-light);
+}
+
+.footer-section ul {
+  background-color: transparent;
+  border: none;
+}
+
+.footer-section li {
+  color: var(--color-secondary-light);
+}
+
+.footer-section a {
+  color: var(--color-secondary-light);
+  border-bottom: 1px dotted transparent;
+}
+
+.footer-section a:hover {
+  color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
+}
+
+/* Footer Bottom Visual Polish */
+.footer-bottom {
+  background-color: rgba(26, 48, 9, 0.3);
+  border-top: 1px solid rgba(244, 224, 77, 0.2);
+}
+
+.footer-bottom p {
+  color: var(--color-secondary-light);
+}

@@ -1,0 +1,153 @@
+/* Card Visual Enhancements Only - MI Nurul Falah */
+
+/* Base Card Enhancement */
+.card {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Highlight Cards Enhancement */
+.highlight-cards .card {
+  background-color: #fafdf7;
+  border: 1px solid rgba(45, 80, 22, 0.1);
+  box-shadow: 0 3px 12px rgba(45, 80, 22, 0.06);
+}
+
+/* News Items Enhancement */
+.news-item {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(143, 181, 104, 0.15);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* Announcement Items Enhancement */
+.announcement-item {
+  background-color: #fafdf7;
+  border: 1px solid rgba(45, 80, 22, 0.1);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* News Grid Items Enhancement */
+.news-grid .news-item {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Event Items Enhancement */
+.event-item {
+  background-color: #fafdf7;
+  border: 1px solid rgba(244, 224, 77, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Gallery Items Enhancement */
+.gallery-item {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Video Items Enhancement */
+.video-item {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Contact Items Enhancement */
+.contact-item {
+  background-color: #fafdf7;
+  border: 1px solid rgba(143, 181, 104, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Values Grid Items Enhancement */
+.value-item {
+  background-color: #fafdf7;
+  border: 1px solid rgba(244, 224, 77, 0.15);
+  border-bottom: 3px solid var(--color-primary);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Program Cards Enhancement */
+.program-cards .card {
+  background: linear-gradient(135deg, #fafdf7 0%, #fdfdfd 100%);
+  border: 1px solid rgba(143, 181, 104, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Category Items Enhancement */
+.category {
+  background-color: #fafdf7;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Approach Items Enhancement */
+.approach-item {
+  background-color: #fafdf7;
+  border: 1px solid rgba(143, 181, 104, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Vision and Mission Items Enhancement */
+.vision, .mission {
+  background-color: #fafdf7;
+  border: 1px solid rgba(244, 224, 77, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Hours Items Enhancement */
+.hours-item {
+  background-color: #fafdf7;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* Form Container Enhancement */
+.form {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Contact Form Background Enhancement */
+.contact-form {
+  background-color: #fafdf7;
+  border-radius: 12px;
+}
+
+/* Table Enhancement */
+table {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* Map Container Enhancement */
+.map-container {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(45, 80, 22, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}

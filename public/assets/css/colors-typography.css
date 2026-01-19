@@ -1,0 +1,272 @@
+/* Colors and Typography Only - MI Nurul Falah */
+
+/* Enhanced Color Variables */
+:root {
+  /* Islamic Theme - Refined Colors */
+  --color-primary: #2d4a1a;
+  --color-primary-light: #4a6730;
+  --color-primary-dark: #1f3312;
+  
+  --color-secondary: #e8d855;
+  --color-secondary-light: #f0e27d;
+  --color-secondary-dark: #d4c44a;
+  
+  --color-accent: #7fa65a;
+  --color-accent-light: #a0c27b;
+  
+  /* Neutral Colors - Warmer Tones */
+  --color-white: #fdfdfd;
+  --color-gray-light: #f5f7f2;
+  --color-gray: #6b7563;
+  --color-gray-dark: #2c3426;
+  --color-black: #1a1f15;
+  
+  /* Typography Colors */
+  --text-primary: #2c3426;
+  --text-secondary: #4a5343;
+  --text-muted: #6b7563;
+  --text-inverse: #fdfdfd;
+  
+  /* Enhanced Typography */
+  --font-family-primary: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-family-secondary: 'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-family-accent: var(--font-family-secondary);
+  
+  /* Font Sizes - Scaled for Readability */
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+  --line-height-loose: 1.9;
+}
+
+/* Base Typography Improvements */
+body {
+  font-family: var(--font-family-primary);
+  color: var(--text-primary);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-secondary);
+  color: var(--color-primary);
+  line-height: var(--line-height-tight);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+}
+
+h6 {
+  font-size: var(--font-size-base);
+}
+
+/* Enhanced Paragraphs */
+p {
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1em;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Navigation Typography */
+.nav-menu a {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.nav-menu a.active {
+  color: var(--color-white);
+}
+
+/* Logo Typography */
+.logo h1 {
+  font-family: var(--font-family-secondary);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+/* Button Typography */
+.cta-button {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.cta-button.primary {
+  color: var(--color-white);
+}
+
+.cta-button.secondary {
+  color: var(--color-primary);
+}
+
+/* Card Typography */
+.card h3 {
+  font-family: var(--font-family-secondary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.card p {
+  color: var(--text-muted);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Hero Section Typography */
+.hero {
+  color: var(--color-white);
+}
+
+.hero h1 {
+  font-family: var(--font-family-secondary);
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.hero p {
+  font-family: var(--font-family-primary);
+  color: var(--color-secondary-light);
+  font-weight: 400;
+}
+
+/* Footer Typography */
+footer {
+  color: var(--color-white);
+}
+
+.footer-section h3,
+.footer-section h4 {
+  font-family: var(--font-family-secondary);
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: var(--color-secondary-light);
+}
+
+.footer-section ul {
+  color: var(--color-secondary-light);
+}
+
+.footer-section a {
+  color: var(--color-secondary-light);
+  font-weight: 400;
+}
+
+/* News Items Typography */
+.news-item h3 {
+  font-family: var(--font-family-secondary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.news-item p {
+  color: var(--text-muted);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Form Typography */
+input, textarea, select {
+  font-family: var(--font-family-primary);
+  color: var(--text-primary);
+}
+
+.form-group label {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Table Typography */
+th {
+  font-family: var(--font-family-secondary);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+td {
+  color: var(--text-secondary);
+}
+
+/* Code Typography */
+code {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  color: var(--color-primary-dark);
+}
+
+/* Blockquote Typography */
+blockquote {
+  font-family: var(--font-family-secondary);
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* List Typography */
+li {
+  color: var(--text-secondary);
+}
+
+/* Responsive Typography */
+@media (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: var(--font-size-5xl);
+  }
+}
