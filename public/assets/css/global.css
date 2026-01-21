@@ -133,12 +133,18 @@ select {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: var(--color-gray-dark);
+}
+
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1);
+  box-shadow: 0 0 0 2px rgba(45, 80, 22, 0.1);
 }
 
 textarea {

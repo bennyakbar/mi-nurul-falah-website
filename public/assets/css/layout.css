@@ -44,15 +44,18 @@ nav {
 }
 
 .nav-menu a:hover {
-  color: var(--color-white);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: var(--color-primary-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .nav-menu a.active {
-  color: var(--color-white);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
 }
 
 .hamburger {
@@ -78,6 +81,15 @@ main {
 /* Sections */
 section {
   padding: var(--spacing-3xl) 0;
+}
+
+section h2 {
+  text-align: center;
+}
+
+.about-paragraph {
+  text-align: center !important;
+  margin-top: var(--spacing-md);
 }
 
 .page-hero {
@@ -148,8 +160,12 @@ section {
 }
 
 .cta-button:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .cta-button.primary {
@@ -218,8 +234,7 @@ section {
 }
 
 .card:hover {
-  transform: translateY(-8px) rotateX(2deg);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
@@ -273,9 +288,9 @@ footer {
   transition: width 0.3s ease;
 }
 
-.footer-section:hover h3::after,
-.footer-section:hover h4::after {
-  width: 60px;
+.footer-section h3:hover::after,
+.footer-section h4:hover::after {
+  width: 40px;
 }
 
 .footer-section p,
@@ -303,20 +318,11 @@ footer {
 
 .footer-section a:hover {
   color: var(--color-secondary);
-  transform: translateX(4px);
 }
 
-.footer-section a::before {
-  content: "→";
-  position: absolute;
-  left: -20px;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.footer-section a:hover::before {
-  opacity: 1;
-  left: -16px;
+.footer-section a:focus {
+  outline: 1px solid var(--color-secondary);
+  outline-offset: 1px;
 }
 
 .footer-bottom {

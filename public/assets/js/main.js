@@ -132,17 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Back to top button functionality
     function initBackToTop() {
-        // Create back to top button if it doesn't exist
-        let backToTopBtn = document.querySelector('.back-to-top');
+        const backToTopBtn = document.querySelector('#backToTop');
         
-        if (!backToTopBtn) {
-            backToTopBtn = document.createElement('button');
-            backToTopBtn.className = 'back-to-top';
-            backToTopBtn.innerHTML = '↑';
-            backToTopBtn.setAttribute('aria-label', 'Kembali ke atas');
-            document.body.appendChild(backToTopBtn);
-        }
-
+        if (!backToTopBtn) return;
+        
         // Show/hide button based on scroll position
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) {
@@ -151,9 +144,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 backToTopBtn.classList.remove('show');
             }
         });
-
+        
         // Scroll to top when clicked
-        backToTopBtn.addEventListener('click', function() {
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
