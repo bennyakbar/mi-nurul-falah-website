@@ -2,8 +2,11 @@
 
 /* Header & Navigation */
 header {
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -21,6 +24,7 @@ nav {
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
   margin-bottom: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-menu {
@@ -39,10 +43,16 @@ nav {
   transition: all 0.2s ease;
 }
 
-.nav-menu a:hover,
+.nav-menu a:hover {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 .nav-menu a.active {
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
 }
 
 .hamburger {
@@ -112,44 +122,69 @@ section {
 /* CTA Buttons */
 .cta-button {
   display: inline-block;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
   padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: var(--border-radius-lg);
+  border-radius: 50px;
   text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
 }
 
 .cta-button:hover {
-  background-color: var(--color-secondary-dark);
-  color: var(--color-primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button.primary {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: var(--color-white);
-  border-color: var(--color-primary);
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button.primary:hover {
-  background-color: var(--color-primary-light);
-  border-color: var(--color-primary-light);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
 }
 
 .cta-button.secondary {
-  background-color: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  color: var(--color-white);
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button.secondary:hover {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-secondary-dark), var(--color-secondary));
+}
+
+.cta-button.outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  box-shadow: none;
+}
+
+.cta-button.outline:hover {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: var(--color-white);
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
 }
 
 /* Grid Layouts */
@@ -172,16 +207,19 @@ section {
 
 /* Cards */
 .card {
-  background-color: var(--color-white);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-lg);
-  box-shadow: var(--shadow-md);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px) rotateX(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
@@ -303,12 +341,14 @@ footer {
     left: -100%;
     width: 100%;
     height: calc(100vh - 80px);
-    background-color: var(--color-white);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: var(--spacing-2xl) 0;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     transition: left 0.3s ease;
     gap: var(--spacing-lg);
   }
@@ -321,6 +361,10 @@ footer {
     width: 80%;
     text-align: center;
     padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .hamburger {
