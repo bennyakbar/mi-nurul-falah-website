@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - MI Nurul Falah</title>
+    <meta name="description" content="Hubungi MI Nurul Falah - Informasi Kontak dan Lokasi">
+
+    <!-- Fonts: Poppins (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">MI Nurul Falah</a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="akademik.html">Akademik</a></li>
+                    <li><a href="ppdb.html" class="nav-highlight">PPDB</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="kontak.html" class="active">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="bg-light section-padding text-center">
+            <div class="container">
+                <h1>Hubungi Kami</h1>
+                <p>Silakan hubungi kami untuk informasi lebih lanjut mengenai PPDB atau hal lainnya.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid-2-col">
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="mb-lg">Informasi Kontak</h2>
+                        <div class="card" style="border-top: none; padding: 0; box-shadow: none;">
+                            <p><strong>Alamat:</strong><br>Jalan Pendidikan No. 123, Kota Contoh, Indonesia 12345</p>
+                            <br>
+                            <p><strong>Telepon / WhatsApp:</strong><br>+62 812-3456-7890</p>
+                            <br>
+                            <p><strong>Email:</strong><br>info@smpnurulfalah.sch.id</p>
+                            <br>
+                            <p><strong>Jam Operasional:</strong><br>Senin - Jumat: 07.00 - 15.00 WIB<br>Sabtu: 07.00 -
+                                12.00 WIB</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="mb-lg">Kirim Pesan</h2>
+                        <form action="#" method="post" id="contactForm" class="card">
+                            <div style="margin-bottom: 20px;">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" required placeholder="Contoh: Budi Santoso">
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <label for="email">Email (Opsional)</label>
+                                <input type="email" id="email" name="email" placeholder="email@contoh.com">
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <label for="message">Pesan</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Tulis pesan Anda di sini..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Map -->
+                <div style="margin-top: 50px;">
+                    <h2 class="text-center mb-lg">Lokasi Kami</h2>
+                    <div
+                        style="width: 100%; height: 400px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.176467362!2d106.829147!3d-6.225574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4c4c4c4c5%3A0x1234567890abcdef!2sMI%20Nurul%20Falah!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <!-- Note: Since I cannot convert the short URL 'https://maps.app.goo.gl/YAT259A1owmSkxNa6' to a full embed code without browsing, 
+                             I am using a generic embed for 'MI Nurul Falah'. 
+                             PLEASE REPLACE the 'src' above with the actual embed code from Google Maps > Share > Embed a map. 
+                             The short link provided was: https://maps.app.goo.gl/YAT259A1owmSkxNa6 
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>MI Nurul Falah</h3>
+                <p>Jalan Pendidikan No. 123, Kota Contoh</p>
+            </div>
+            <div class="footer-section">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="ppdb.html">Info PPDB</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Sosial Media</h3>
+                <p>Instagram | Facebook</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MI Nurul Falah. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
