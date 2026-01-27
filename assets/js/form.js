@@ -3,31 +3,32 @@
  * Handles contact form validation and submission
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.form');
-    
+document.addEventListener('DOMContentLoaded', function () {
+    // Fix: Changed selector from '.form' to '#contactForm' to match HTML
+    const contactForm = document.querySelector('#contactForm');
+
     if (contactForm) {
-        initContactForm();
+        initContactForm(contactForm);
     }
 
-    function initContactForm() {
-        const submitBtn = contactForm.querySelector('.submit-button');
+    function initContactForm(contactForm) {
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
         const requiredFields = contactForm.querySelectorAll('[required]');
-        
+
         // Form validation and submission
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Reset previous error states
             clearErrors();
-            
+
             // Validate form
             const isValid = validateForm();
-            
+
             if (isValid) {
                 // Show loading state
                 setButtonLoading(submitBtn, true);
-                
+
                 // Simulate form submission (since there's no backend)
                 setTimeout(() => {
                     submitFormData();
@@ -40,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Real-time validation
         requiredFields.forEach(field => {
-            field.addEventListener('blur', function() {
+            field.addEventListener('blur', function () {
                 validateField(this);
             });
 
-            field.addEventListener('input', function() {
+            field.addEventListener('input', function () {
                 clearFieldError(this);
             });
         });
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Email validation
         const emailField = contactForm.querySelector('#email');
         if (emailField) {
-            emailField.addEventListener('blur', function() {
+            emailField.addEventListener('blur', function () {
                 if (this.value && !Utils.isValidEmail(this.value)) {
                     showFieldError(this, 'Format email tidak valid');
                 }
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Phone validation
         const phoneField = contactForm.querySelector('#phone');
         if (phoneField) {
-            phoneField.addEventListener('input', function() {
+            phoneField.addEventListener('input', function () {
                 // Only allow numbers, spaces, +, -, and parentheses
                 this.value = this.value.replace(/[^0-9\s+\-\(\)]/g, '');
             });
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateForm() {
         let isValid = true;
         const requiredFields = contactForm.querySelectorAll('[required]');
-        
+
         requiredFields.forEach(field => {
             if (!validateField(field)) {
                 isValid = false;
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateField(field) {
         const value = field.value.trim();
         const fieldName = field.getAttribute('name') || field.getAttribute('id');
-        
+
         // Check if field is empty
         if (!value) {
             showFieldError(field, 'Field ini wajib diisi');
@@ -100,28 +101,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     return false;
                 }
                 break;
-            
+
             case 'phone':
                 if (value && value.length < 10) {
                     showFieldError(field, 'Nomor telepon minimal 10 digit');
                     return false;
                 }
                 break;
-            
+
             case 'name':
                 if (value.length < 3) {
                     showFieldError(field, 'Nama minimal 3 karakter');
                     return false;
                 }
                 break;
-            
+
             case 'subject':
                 if (value === '') {
                     showFieldError(field, 'Pilih salah satu subjek');
                     return false;
                 }
                 break;
-            
+
             case 'message':
                 if (value.length < 10) {
                     showFieldError(field, 'Pesan minimal 10 karakter');
@@ -135,13 +136,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showFieldError(field, message) {
         clearFieldError(field);
-        
+
         field.classList.add('error');
-        
+
         const errorElement = document.createElement('div');
         errorElement.className = 'error-message';
         errorElement.textContent = message;
-        
+
         field.parentNode.appendChild(errorElement);
     }
 
@@ -156,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function clearErrors() {
         const errorFields = contactForm.querySelectorAll('.error');
         const errorMessages = contactForm.querySelectorAll('.error-message');
-        
+
         errorFields.forEach(field => field.classList.remove('error'));
         errorMessages.forEach(msg => msg.remove());
     }
@@ -174,23 +175,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function submitFormData() {
-        const submitBtn = contactForm.querySelector('.submit-button');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
-        
+
         // Since there's no backend, we'll show a success message
         // and log the data (in production, this would be sent to a server)
         console.log('Form Data Submitted:', data);
-        
+
         // Show success message
         showFormMessage('Pesan Anda telah terkirim! Kami akan segera menghubungi Anda.', 'success');
-        
+
         // Reset form
         contactForm.reset();
-        
+
         // Reset button state
         setButtonLoading(submitBtn, false);
-        
+
         // In a real implementation, you would send the data to a server:
         // fetch('/api/contact', {
         //     method: 'POST',
@@ -236,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Utility functions
 const Utils = {
-    isValidEmail: function(email) {
+    isValidEmail: function (email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 };
