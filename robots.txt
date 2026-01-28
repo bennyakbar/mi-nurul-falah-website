@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://minurulfalah.sch.id/sitemap.xml
