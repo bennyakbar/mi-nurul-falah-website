@@ -102,4 +102,130 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // 8. Hero Parallax Effect
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        window.addEventListener('scroll', () => {
+            const scrollValue = window.scrollY;
+            if (scrollValue < 600) {
+                // Move background slower than scroll
+                heroSection.style.backgroundPosition = `center ${scrollValue * 0.5}px`;
+            }
+        });
+    }
+
+    // 9. Lightbox Gallery Feature
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+    if (galleryImages.length > 0) {
+        // Create Lightbox DOM
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <button class="lightbox-btn lightbox-close" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <button class="lightbox-btn lightbox-prev" aria-label="Previous">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="lightbox-btn lightbox-next" aria-label="Next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <div class="lightbox-content">
+                <div class="lightbox-loader"></div>
+                <img src="" alt="Gallery Preview" class="lightbox-img" style="display: none;">
+                <div class="lightbox-caption"></div>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        // Elements
+        const lightboxImg = lightbox.querySelector('.lightbox-img');
+        const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+        const loader = lightbox.querySelector('.lightbox-loader');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+
+        let currentIndex = 0;
+
+        // Functions
+        const showImage = (index) => {
+            if (index < 0) index = galleryImages.length - 1;
+            if (index >= galleryImages.length) index = 0;
+            currentIndex = index;
+
+            const targetImg = galleryImages[currentIndex];
+            const src = targetImg.getAttribute('src');
+            const alt = targetImg.getAttribute('alt');
+
+            // 1. Fade out current image
+            lightboxImg.classList.add('fade-out');
+
+            // 2. Wait for fade out, then swap source
+            setTimeout(() => {
+                lightboxImg.style.display = 'none';
+                loader.style.display = 'block';
+
+                lightboxImg.src = src;
+                lightboxCaption.textContent = alt;
+
+                // 3. When new image loads
+                lightboxImg.onload = () => {
+                    loader.style.display = 'none';
+                    lightboxImg.style.display = 'block';
+
+                    // Trigger reflow to restart transition
+                    void lightboxImg.offsetWidth;
+
+                    lightboxImg.classList.remove('fade-out');
+                };
+            }, 200); // Matches CSS transition duration
+        };
+
+        const openLightbox = (index) => {
+            lightbox.classList.add('active');
+            showImage(index);
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        // Event Listeners
+        galleryImages.forEach((img, index) => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => openLightbox(index));
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Close on backdrop click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Navigation
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentIndex + 1);
+        });
+
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+            if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+        });
+    }
+
+
 });
