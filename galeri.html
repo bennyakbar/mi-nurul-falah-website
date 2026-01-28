@@ -38,7 +38,9 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="yayasan.html">Yayasan</a></li>
+                    <li><a href="profile.html">Unit MI</a></li>
+                    <li><a href="ra.html">Unit RA</a></li>
                     <li><a href="akademik.html">Akademik</a></li>
                     <li><a href="ppdb.html" class="nav-highlight">PPDB</a></li>
                     <li><a href="berita.html">Berita</a></li>
@@ -55,54 +57,93 @@
         <section class="bg-light section-padding text-center">
             <div class="container">
                 <h1>Galeri Foto</h1>
+                <div class="gallery-filters mt-lg">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="mi">Kegiatan MI</button>
+                    <button class="filter-btn" data-filter="ra">Kegiatan RA</button>
+                </div>
             </div>
         </section>
 
         <section class="section-padding">
             <div class="container">
                 <div class="gallery-grid">
-                    <!-- Gallery Items -->
-                    <div class="gallery-item">
-                        <img src="assets/images/gallery-class.webp" alt="Kegiatan Belajar" loading="lazy"
+                    <!-- Gallery Items MI -->
+                    <div class="gallery-item" data-category="mi">
+                        <img src="assets/images/gallery-class.webp" alt="Kegiatan Belajar MI" loading="lazy"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <div
                             style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
-                            Kegiatan Belajar</div>
+                            KBM MI</div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/gallery-flag.webp" alt="Upacara Bendera" loading="lazy"
+                    <div class="gallery-item" data-category="mi">
+                        <img src="assets/images/gallery-flag.webp" alt="Upacara Bendera MI" loading="lazy"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <div
                             style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
-                            Upacara Bendera</div>
+                            Upacara MI</div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/gallery-hajj.webp" alt="Manasik Haji Cilik" loading="lazy"
+
+                    <!-- Gallery Items RA -->
+                    <div class="gallery-item" data-category="ra">
+                        <img src="assets/images/gallery-class.webp" alt="Finger Painting RA" loading="lazy"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <div
                             style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
-                            Manasik Haji Cilik</div>
+                            Finger Painting RA</div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/gallery-flag.webp" alt="Pentas Seni" loading="lazy"
+                    <div class="gallery-item" data-category="ra">
+                        <img src="assets/images/gallery-flag.webp" alt="Senam Ceria RA" loading="lazy"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <div
                             style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
-                            Pentas Seni</div>
+                            Senam Ceria RA</div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/gallery-class.webp" alt="Outbond" loading="lazy"
+
+                    <!-- Mixed Items -->
+                    <div class="gallery-item" data-category="mi">
+                        <img src="assets/images/gallery-hajj.webp" alt="Manasik Haji MI" loading="lazy"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <div
                             style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
-                            Outbond</div>
+                            Manasik Haji</div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/gallery-hajj.webp" alt="Wisuda" loading="lazy"
+                    <div class="gallery-item" data-category="ra">
+                        <img src="assets/images/gallery-hajj.webp" alt="Pentas Seni RA" loading="lazy"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <div
                             style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
-                            Wisuda</div>
+                            Pentas Seni RA</div>
+                    </div>
+
+                    <!-- Additional RA Dummy Items -->
+                    <div class="gallery-item" data-category="ra">
+                        <img src="assets/images/gallery-class.webp" alt="Makan Sehat" loading="lazy"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
+                            Makan Sehat Bersama</div>
+                    </div>
+                    <div class="gallery-item" data-category="ra">
+                        <img src="assets/images/gallery-flag.webp" alt="Field Trip RA" loading="lazy"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
+                            Kunjungan Pemadam Kebakaran</div>
+                    </div>
+                    <div class="gallery-item" data-category="ra">
+                        <img src="assets/images/gallery-hajj.webp" alt="Praktek Sholat" loading="lazy"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
+                            Praktek Sholat Dhuha</div>
+                    </div>
+                    <div class="gallery-item" data-category="ra">
+                        <img src="assets/images/gallery-class.webp" alt="Renang RA" loading="lazy"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 8px; font-size: 0.9rem; text-align: center;">
+                            Berenang Ceria</div>
                     </div>
                 </div>
             </div>

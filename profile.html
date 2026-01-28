@@ -38,7 +38,9 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="profile.html" class="active">Profil</a></li>
+                    <li><a href="yayasan.html">Yayasan</a></li>
+                    <li><a href="profile.html" class="active">Unit MI</a></li>
+                    <li><a href="ra.html">Unit RA</a></li>
                     <li><a href="akademik.html">Akademik</a></li>
                     <li><a href="ppdb.html" class="nav-highlight">PPDB</a></li>
                     <li><a href="berita.html">Berita</a></li>
@@ -52,14 +54,26 @@
     <!-- Main Content -->
     <main>
         <!-- Page Header -->
-        <section class="bg-light section-padding text-center">
-            <div class="container">
-                <h1>Profil Sekolah</h1>
+        <!-- Page Header -->
+        <!-- Hero Section Unit MI -->
+        <section class="hero-section"
+            style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero_mi_placeholder.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-content">
+                <span class="badge-subtle"
+                    style="background:rgba(255,255,255,0.2); color:white; border:1px solid rgba(255,255,255,0.4);">Madrasah
+                    Ibtidaiyah</span>
+                <h1>Cerdas, Berakhlak, &<br>Berprestasi</h1>
+                <p>Membangun generasi Qur'ani yang unggul dalam ilmu pengetahuan dan teknologi berlandaskan iman
+                    dan taqwa.</p>
+                <div class="hero-buttons">
+                    <a href="ppdb.html" class="btn btn-primary">Daftar MI</a>
+                    <a href="#sejarah" class="btn btn-secondary">Selengkapnya</a>
+                </div>
             </div>
         </section>
 
         <!-- Sejarah -->
-        <section class="section-padding">
+        <section id="sejarah" class="section-padding">
             <div class="container" style="max-width: 800px;">
                 <h2 class="mb-lg">Sejarah Singkat</h2>
                 <p>
@@ -97,10 +111,79 @@
         </section>
     </main>
 
-    <!-- Tenaga Pengajar Section (Glass Layout) -->
+    <!-- Tenaga Pengajar Section (Ethereal Theme) -->
+    <section class="ethereal-teachers">
+        <div class="container">
+            <div class="ethereal-header text-center mb-lg">
+                <span class="sub-greetings">Tim Pendidik Kami</span>
+                <h2>Tenaga Pengajar</h2>
+                <p>Mengenal para ustadz dan ustadzah yang membimbing dengan hati.</p>
+            </div>
 
+            <div class="ethereal-carousel-wrapper">
+                <button class="ethereal-nav prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
 
-    <!-- Footer -->
+                <div class="ethereal-track" id="etherealTrack">
+                    <!-- Cards will be populated by JS -->
+                </div>
+
+                <button class="ethereal-nav next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview MI (Simple Grid same as RA) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="ethereal-header text-center mb-lg">
+                <h2>Aktivitas Siswa</h2>
+                <p>Momen inspiratif siswa-siswi MI Nurul Falah dalam menuntut ilmu dan berkreasi.</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Placeholders for MI gallery -->
+                <div class="gallery-item" style="border-radius: 16px; overflow: hidden; height: 250px;">
+                    <img src="https://via.placeholder.com/400x300?text=Kegiatan+KBM" alt="Kegiatan KBM"
+                        style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="gallery-item" style="border-radius: 16px; overflow: hidden; height: 250px;">
+                    <img src="https://via.placeholder.com/400x300?text=Ekskul+Pramuka" alt="Ekskul Pramuka"
+                        style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="gallery-item" style="border-radius: 16px; overflow: hidden; height: 250px;">
+                    <img src="https://via.placeholder.com/400x300?text=Upacara+Bendera" alt="Upacara Bendera"
+                        style="width:100%; height:100%; object-fit:cover;">
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="galeri.html" class="btn btn-secondary">Lihat Galeri Lengkap &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA MI -->
+    <section class="section-padding"
+        style="background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%); color: white;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: 20px;">Mari Bergabung Keluarga Besar MI Nurul Falah</h2>
+            <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 30px;">
+                Membangun generasi cerdas dan berakhlak mulia. Pendaftaran Tahun Ajaran 2026/2027 telah dibuka.
+            </p>
+            <a href="ppdb.html" class="btn"
+                style="background: white; color: var(--color-primary); font-weight: bold;">Daftar Sekarang</a>
+        </div>
+    </section>
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-section">

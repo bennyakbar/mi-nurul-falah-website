@@ -38,7 +38,9 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="yayasan.html">Yayasan</a></li>
+                    <li><a href="profile.html">Unit MI</a></li>
+                    <li><a href="ra.html">Unit RA</a></li>
                     <li><a href="akademik.html">Akademik</a></li>
                     <li><a href="ppdb.html" class="nav-highlight active">PPDB</a></li>
                     <li><a href="berita.html">Berita</a></li>
@@ -54,98 +56,188 @@
         <!-- PPDB Hero -->
         <section class="hero-section" style="padding: 60px 0; background: var(--color-primary);">
             <div class="container hero-content">
-                <h1>Penerimaan Peserta Didik Baru<br>Tahun Ajaran 2026/2027</h1>
-                <p>Mari bergabung bersama keluarga besar MI Nurul Falah</p>
-                <div class="hero-buttons">
-                    <a href="#daftar" class="btn btn-secondary">Daftar Sekarang</a>
-                    <a href="#syarat" class="btn btn-light"
-                        style="background: white; color: var(--color-primary);">Lihat Persyaratan</a>
+                <span class="badge-subtle"
+                    style="background: rgba(255,255,255,0.2); color:white; border:1px solid rgba(255,255,255,0.4);">
+                    Tahun Ajaran 2026/2027
+                </span>
+                <h1>Penerimaan Peserta Didik Baru</h1>
+                <p>Silakan pilih jenjang pendidikan yang dituju:</p>
+
+                <!-- Level Selection Tabs -->
+                <div class="ppdb-level-tabs">
+                    <button class="level-tab active" data-target="mi">
+                        <span class="level-icon">🏫</span>
+                        <div class="level-info">
+                            <strong>Jenjang MI</strong>
+                            <span>(Setara SD)</span>
+                        </div>
+                    </button>
+                    <button class="level-tab" data-target="ra">
+                        <span class="level-icon">🧸</span>
+                        <div class="level-info">
+                            <strong>Jenjang RA</strong>
+                            <span>(Setara TK)</span>
+                        </div>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Informasi Umum -->
-        <section class="section-padding text-center">
-            <div class="container">
-                <h2>Gelombang Pendaftaran</h2>
-                <div class="grid-3">
-                    <div class="card">
-                        <h3>Gelombang 1</h3>
-                        <p class="highlight-date">Januari - Maret 2026</p>
-                        <p>Biaya pendaftaran normal.</p>
-                    </div>
-                    <div class="card" style="opacity: 0.8;">
-                        <h3>Gelombang 2</h3>
-                        <p class="highlight-date">April - Juni 2026</p>
-                        <p>Selama kuota masih tersedia.</p>
+        <!-- Content Container for Tabs -->
+        <div id="ppdb-content-container">
+
+            <!-- === KONTEN PPDB MI === -->
+            <div id="ppdb-mi" class="ppdb-tab-content active">
+                <div class="section-padding text-center bg-light">
+                    <div class="container">
+                        <h2>Info Pendaftaran MI</h2>
+                        <p>Mencetak generasi cerdas & berakhlak mulia melalui kurikulum terpadu.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Persyaratan & Alur -->
-        <section id="syarat" class="section-padding bg-light">
-            <div class="container">
-                <div class="grid-2-col"> <!-- Custom Grid for Content -->
-
-                    <!-- Persyaratan -->
-                    <div>
-                        <h2 class="mb-lg">Persyaratan Pendaftaran</h2>
-                        <ul class="checklist-ul">
-                            <li>Mengisi Formulir Pendaftaran</li>
-                            <li>Fotokopi Akta Kelahiran (2 Lembar)</li>
-                            <li>Fotokopi Kartu Keluarga (2 Lembar)</li>
-                            <li>Fotokopi KTP Orang Tua (Ayah & Ibu)</li>
-                            <li>Pas Foto 3x4 (4 Lembar)</li>
-                            <li>Usia minimal 6 tahun pada bulan Juli</li>
-                        </ul>
+                <!-- Informasi Umum MI -->
+                <section class="section-padding text-center">
+                    <div class="container">
+                        <h2>Gelombang Pendaftaran MI</h2>
+                        <div class="grid-3">
+                            <div class="card">
+                                <h3>Gelombang 1</h3>
+                                <p class="highlight-date">Januari - Maret 2026</p>
+                                <p>Biaya pendaftaran normal.</p>
+                            </div>
+                            <div class="card" style="opacity: 0.8;">
+                                <h3>Gelombang 2</h3>
+                                <p class="highlight-date">April - Juni 2026</p>
+                                <p>Selama kuota masih tersedia.</p>
+                            </div>
+                        </div>
                     </div>
+                </section>
 
-                    <!-- Alur -->
-                    <div>
-                        <h2 class="mb-lg">Alur Pendaftaran</h2>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-number">1</div>
-                                <div class="timeline-content">
-                                    <h4>Daftar Online/Offline</h4>
-                                    <p>Isi formulir via website atau datang ke sekolah.</p>
-                                </div>
+                <!-- Persyaratan & Alur MI -->
+                <section id="syarat-mi" class="section-padding bg-light">
+                    <div class="container">
+                        <div class="grid-2-col">
+                            <!-- Persyaratan -->
+                            <div>
+                                <h2 class="mb-lg">Persyaratan MI</h2>
+                                <ul class="checklist-ul">
+                                    <li>Mengisi Formulir Pendaftaran</li>
+                                    <li>Fotokopi Akta Kelahiran (2 Lembar)</li>
+                                    <li>Fotokopi Kartu Keluarga (2 Lembar)</li>
+                                    <li>Fotokopi KTP Orang Tua (Ayah & Ibu)</li>
+                                    <li>Pas Foto 3x4 (4 Lembar)</li>
+                                    <li>Usia minimal 6 tahun pada bulan Juli</li>
+                                </ul>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-number">2</div>
-                                <div class="timeline-content">
-                                    <h4>Verifikasi Berkas</h4>
-                                    <p>Serahkan berkas persyaratan ke panitia.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-number">3</div>
-                                <div class="timeline-content">
-                                    <h4>Wawancara & Observasi</h4>
-                                    <p>Calon siswa dan orang tua mengikuti sesi observasi.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-number">4</div>
-                                <div class="timeline-content">
-                                    <h4>Pengumuman</h4>
-                                    <p>Hasil seleksi diumumkan via WhatsApp/Website.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-number">5</div>
-                                <div class="timeline-content">
-                                    <h4>Daftar Ulang</h4>
-                                    <p>Pelunasan biaya masuk dan administrasi.</p>
+                            <!-- Alur -->
+                            <div>
+                                <h2 class="mb-lg">Alur Pendaftaran</h2>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-number">1</div>
+                                        <div class="timeline-content">
+                                            <h4>Daftar Online/Offline</h4>
+                                            <p>Isi formulir via website atau datang ke sekolah.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-number">2</div>
+                                        <div class="timeline-content">
+                                            <h4>Tes Masuk</h4>
+                                            <p>Tes Calistung dasar & wawancara.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-number">3</div>
+                                        <div class="timeline-content">
+                                            <h4>Daftar Ulang</h4>
+                                            <p>Pembayaran administrasi.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
+                </section>
             </div>
-        </section>
+
+            <!-- === KONTEN PPDB RA === -->
+            <div id="ppdb-ra" class="ppdb-tab-content" style="display: none;">
+                <div class="section-padding text-center" style="background: #E8F5E9;">
+                    <div class="container">
+                        <h2>Info Pendaftaran RA</h2>
+                        <p>Pendidikan usia dini yang ceria, kreatif, dan islami.</p>
+                    </div>
+                </div>
+
+                <!-- Informasi Umum RA -->
+                <section class="section-padding text-center">
+                    <div class="container">
+                        <h2>Gelombang Pendaftaran RA</h2>
+                        <div class="grid-3">
+                            <div class="card">
+                                <h3>Gelombang Dini</h3>
+                                <p class="highlight-date">Desember 2025 - Feb 2026</p>
+                                <p>Diskon uang pangkal khusus.</p>
+                            </div>
+                            <div class="card" style="opacity: 0.8;">
+                                <h3>Gelombang Reguler</h3>
+                                <p class="highlight-date">Maret - Juli 2026</p>
+                                <p>Selama bangku masih tersedia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Persyaratan & Alur RA -->
+                <section id="syarat-ra" class="section-padding bg-light">
+                    <div class="container">
+                        <div class="grid-2-col">
+                            <!-- Persyaratan -->
+                            <div>
+                                <h2 class="mb-lg">Persyaratan RA</h2>
+                                <ul class="checklist-ul">
+                                    <li>Mengisi Formulir Pendaftaran</li>
+                                    <li>Fotokopi Akta Kelahiran</li>
+                                    <li>Fotokopi KK & KTP Orang Tua</li>
+                                    <li>Usia 4-5 Tahun (Kelompok A)</li>
+                                    <li>Usia 5-6 Tahun (Kelompok B)</li>
+                                </ul>
+                            </div>
+                            <!-- Alur -->
+                            <div>
+                                <h2 class="mb-lg">Alur Pendaftaran</h2>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-number">1</div>
+                                        <div class="timeline-content">
+                                            <h4>Kunjungan Sekolah</h4>
+                                            <p>Orang tua & anak melihat lingkungan sekolah.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-number">2</div>
+                                        <div class="timeline-content">
+                                            <h4>Observasi Anak</h4>
+                                            <p>Melihat kesiapan anak (bukan tes).</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-number">3</div>
+                                        <div class="timeline-content">
+                                            <h4>Daftar Ulang</h4>
+                                            <p>Pembayaran administrasi.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
 
         <!-- CTA Final -->
         <section id="daftar" class="section-padding text-center" style="background-color: var(--color-light-gray);">

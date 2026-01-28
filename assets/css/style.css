@@ -190,22 +190,31 @@ h3 {
 
 /* --- Header & Navbar --- */
 /* --- Header & Navbar --- */
+/* --- Header & Navbar --- */
 .site-header {
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.65);
+    /* More transparent */
+    backdrop-filter: blur(20px) saturate(180%);
+    /* Stronger blur & saturation */
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    /* Frosted edge */
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    /* Subtle depth */
 }
 
 .site-header.scrolled {
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Slightly clearer when scrolled */
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    /* Softer shadow */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     padding: 4px 0;
 }
 
@@ -335,9 +344,10 @@ section h2,
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 45px;
-    height: 45px;
-    background-color: var(--color-primary);
+    width: 50px;
+    height: 50px;
+    background: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary), #1B5E20);
     color: white;
     border: none;
     border-radius: 50%;
@@ -345,13 +355,12 @@ section h2,
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
     z-index: 1001;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #back-to-top.show {
@@ -361,8 +370,16 @@ section h2,
 }
 
 #back-to-top:hover {
-    background-color: #1B5E20;
-    transform: scale(1.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.6);
+}
+
+#back-to-top .back-to-top-icon {
+    transition: transform 0.3s ease;
+}
+
+#back-to-top:hover .back-to-top-icon {
+    transform: translateY(-3px);
 }
 
 /* --- Footer --- */
@@ -978,3 +995,1071 @@ html {
     filter: brightness(0.7);
     transform: scale(1.05);
 }
+
+/* --- Ethereal Theme Teacher Carousel --- */
+.ethereal-teachers {
+    padding: 100px 0;
+    position: relative;
+    /* Soft Mint Green Gradient - Visible interaction with white cards */
+    background: linear-gradient(180deg, #F0FDF4 0%, #DCFCE7 100%);
+    overflow: hidden;
+}
+
+/* Header Styling - Calm & Modern */
+.ethereal-header h2 {
+    font-weight: 700;
+    color: #166534;
+    /* Dark Green */
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.ethereal-header p {
+    color: #15803D;
+    /* Medium Green */
+    /* Gray 500 */
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sub-greetings {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    background: rgba(46, 125, 50, 0.08);
+    /* Primary tint */
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+}
+
+/* Carousel Container */
+.ethereal-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Scroll Track */
+.ethereal-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 24px;
+    padding: 20px 4px 50px 4px;
+    /* Bottom padding for shadow space */
+    width: 100%;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ethereal-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Card Design - Glass & Calm */
+/* Card Design - Solid Ethereal */
+/* Card Design - Focus Center Style */
+/* Card Design - Focus Center Style */
+.ethereal-card {
+    flex: 0 0 calc(100% - 40px);
+    /* Mobile */
+    scroll-snap-align: center;
+    position: relative;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 24px;
+    padding: 40px 24px;
+
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    /* Default State (Not Center) */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: scale(0.9);
+    /* Slightly Smaller */
+    opacity: 0.7;
+    /* Visible but secondary */
+    filter: none;
+    /* No Blur as requested */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    will-change: transform, opacity;
+    /* Performance Optimization */
+}
+
+/* Active Center Card */
+.ethereal-card.active {
+    transform: scale(1.05);
+    /* Larger than default */
+    opacity: 1;
+    /* Fully Visible */
+    z-index: 2;
+
+    box-shadow:
+        0 20px 30px -5px rgba(0, 0, 0, 0.1),
+        0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-primary);
+}
+
+/* Card Interactions */
+.ethereal-card:hover {
+    transform: scale(1);
+    opacity: 1;
+    border-color: rgba(46, 125, 50, 0.4);
+}
+
+
+
+/* Card Content */
+/* Card Content - Smooth Staggered Reveal */
+.ethereal-avatar-frame {
+    width: 110px;
+    height: 110px;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ethereal-card.active .ethereal-avatar-frame {
+    transform: scale(1.1);
+    /* Avatar pops slightly more */
+}
+
+/* Base Text Styles */
+.ethereal-name,
+.ethereal-role,
+.ethereal-subject {
+    /* Premise: Start slightly lower and faded */
+    transform: translateY(4px);
+    opacity: 0.8;
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ethereal-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 6px;
+    /* No delay for name, moves first */
+}
+
+.ethereal-role {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    background: rgba(46, 125, 50, 0.06);
+    padding: 4px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    transition-delay: 0.05s;
+    /* Slight delay */
+}
+
+.ethereal-subject {
+    font-size: 0.85rem;
+    color: #6B7280;
+    transition-delay: 0.1s;
+    /* More delay */
+}
+
+/* Active State Text - Fully Revealed */
+.ethereal-card.active .ethereal-name,
+.ethereal-card.active .ethereal-role,
+.ethereal-card.active .ethereal-subject {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Navigation Buttons */
+.ethereal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.ethereal-nav:hover {
+    background: #FFFFFF;
+    color: var(--color-primary);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.ethereal-nav.prev {
+    left: -10px;
+}
+
+.ethereal-nav.next {
+    right: -10px;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .ethereal-card {
+        flex: 0 0 calc(50% - 24px);
+        /* Tablet: 2 cards */
+    }
+
+    .ethereal-nav.prev {
+        left: -20px;
+    }
+
+    .ethereal-nav.next {
+        right: -20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ethereal-card {
+        flex: 0 0 calc(33.333% - 24px);
+        /* Desktop: 3 cards */
+    }
+}
+
+@media (min-width: 1280px) {
+    .ethereal-card {
+        flex: 0 0 calc(25% - 24px);
+        /* LG Desktop: 4 cards */
+    }
+}
+
+/* Utility: Subtle Badge */
+.badge-subtle {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+
+    /* Gallery Filter Buttons */
+    .gallery-filters {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .filter-btn {
+        padding: 8px 24px;
+        border: 1px solid var(--color-primary);
+        background: white;
+        color: var(--color-primary);
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+        background: var(--color-primary);
+        color: white;
+    }
+}
+
+/* Beautiful PPDB Tabs */
+.ppdb-level-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.level-tab {
+    position: relative;
+    background: #FFFFFF;
+    /* Inactive is Solid White */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    min-width: 220px;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.level-tab:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Active State - Beautified */
+/* Active State - Transparent Glass Toggle */
+.level-tab.active {
+    background: rgba(255, 255, 255, 0.1);
+    /* Active becomes Transparent */
+    border: 2px solid #FFFFFF;
+    backdrop-filter: blur(4px);
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.level-tab.active .level-info strong {
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.level-tab.active .level-info span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.level-tab.active .level-icon {
+    transform: scale(1.1) rotate(-5deg);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+/* Icon & Text Styling (Default Inactive - Dark Text) */
+.level-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    /* Green icon */
+    transition: transform 0.4s ease;
+}
+
+.level-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.level-info strong {
+    color: var(--color-primary);
+    /* Green text */
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.level-info span {
+    color: #6B7280;
+    /* Gray text */
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Shine Effect on Active */
+.level-tab.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 200%;
+    }
+
+    100% {
+        left: 200%;
+    }
+}
+
+/* Organization Chart Styles */
+.org-box {
+    display: inline-block;
+    padding: 12px 24px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    color: var(--color-text);
+    position: relative;
+    min-width: 150px;
+    z-index: 2;
+}
+
+.org-box.primary {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.org-box.secondary {
+    background: white;
+    border-left: 4px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.org-connector-v {
+    width: 2px;
+    height: 20px;
+    background: #ccc;
+    margin: 0 auto;
+}
+
+.grid-2.gap-sm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .grid-2.gap-sm {
+        grid-template-columns: 1fr;
+    }
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}
+
+/* === YAYASAN PAGE SPECIFIC STYLES (Clean & Modern) === */
+
+/* Typography Overrides for Yayasan Page */
+.page-yayasan {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    color: #1D1D1F;
+    /* Apple Dark Grey */
+    background-color: #FBFBFD;
+}
+
+.page-yayasan h1,
+.page-yayasan h2,
+.page-yayasan h3 {
+    letter-spacing: -0.02em;
+    /* Tighter headings */
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+/* 1. HERO SECTION */
+.hero-yayasan {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url('../images/gallery-class.webp') no-repeat center center/cover;
+    margin-top: -80px;
+    /* Pull behind transparent header */
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    backdrop-filter: blur(2px);
+}
+
+.hero-content-y {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content-y h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content-y p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+.label-badge {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+}
+
+/* 2. SAMBUTAN */
+.section-sambutan {
+    background: white;
+}
+
+.grid-sambutan {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sambutan-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    /* Soft big shadow */
+    transition: transform 0.5s ease;
+}
+
+.sambutan-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #424245;
+    margin-bottom: 20px;
+}
+
+.sambutan-content .lead {
+    font-size: 1.2rem;
+    color: #1D1D1F;
+    font-weight: 500;
+}
+
+.sambutan-signer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sambutan-signer strong {
+    font-size: 1.1rem;
+    color: #1D1D1F;
+}
+
+.sambutan-signer span {
+    font-size: 0.9rem;
+    color: #86868b;
+}
+
+/* 3. PROFIL TEXT */
+.container-limit {
+    max-width: 900px;
+}
+
+.profil-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #424245;
+    margin-bottom: 24px;
+    text-align: justify;
+}
+
+/* 4. VISI MISI CARDS (Minimalist) */
+.section-vmt {
+    background: white;
+}
+
+.grid-3-vmt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.minimal-card {
+    background: #F5F5F7;
+    border-radius: 18px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.minimal-card:hover {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border-color: #E5E5EA;
+    transform: translateY(-5px);
+}
+
+.icon-header {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.clean-list {
+    list-style: none;
+    padding: 0;
+}
+
+.clean-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #424245;
+}
+
+.clean-list li::before {
+    content: '•';
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 5. ORG CHART (Clean Cards) */
+.org-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.org-card {
+    background: white;
+    border: 1px solid #E5E5EA;
+    border-radius: 12px;
+    padding: 16px 24px;
+    text-align: center;
+    min-width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.org-card.primary {
+    border-color: var(--color-primary);
+    background: rgba(46, 125, 50, 0.05);
+    /* Very subtle tint */
+}
+
+.org-card.highlight {
+    background: #1D1D1F;
+    color: white;
+    border: none;
+}
+
+.org-card.highlight .org-role {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.org-role {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #86868b;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+}
+
+.org-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.org-connector-line {
+    width: 2px;
+    height: 30px;
+    background: #D1D1D6;
+}
+
+.grid-4-org {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 6. BIDANG CARDS */
+.section-bidang {
+    background: white;
+}
+
+.bidang-card {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    background: #FAFAFA;
+    border: 1px solid #F0F0F0;
+    transition: all 0.3s;
+}
+
+.bidang-card:hover {
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.bidang-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* 7. GALLERY YAYASAN */
+.header-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-gallery-y {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item-y {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    group: hover;
+}
+
+.gallery-item-y img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item-y:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item-y .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item-y:hover .caption {
+    opacity: 1;
+}
+
+.bg-dark-y {
+    background: #1D1D1F;
+    color: white;
+    padding: 40px 0;
+}
+
+/* Responsive Yayasan */
+@media (max-width: 768px) {
+    .hero-content-y h1 {
+        font-size: 2.5rem;
+    }
+
+    .grid-sambutan,
+    .grid-3-vmt,
+    .grid-gallery-y {
+        grid-template-columns: 1fr;
+    }
+
+    .header-split {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .org-level {
+        flex-wrap: wrap;
+    }
+
+    /* === ORG CHART Version 2 (Strict Hierarchy) === */
+
+    .org-layout-v2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .org-node-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 0 10px;
+        /* Spacing between side-by-side nodes */
+    }
+
+    /* CARDS */
+    .org-card-v2 {
+        background: white;
+        padding: 16px 24px;
+        border-radius: 12px;
+        border: 1px solid #E5E5EA;
+        /* Subtle Border */
+        text-align: center;
+        min-width: 220px;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .org-card-v2:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .org-card-v2.level-1 {
+        min-width: 260px;
+        border-color: var(--color-primary);
+        background: #F8FCF8;
+        /* Very light green tint */
+    }
+
+    .org-card-v2.pembina {
+        min-width: 260px;
+        background: #1D1D1F;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .org-role {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        color: #8C8C8C;
+        margin-bottom: 6px;
+    }
+
+    .org-name {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #1D1D1F;
+    }
+
+    /* CONNECTORS */
+
+    /* Vertical Line Standard */
+    .org-connector-vertical {
+        width: 2px;
+        height: 30px;
+        background-color: #D1D1D6;
+    }
+
+    .org-connector-vertical-small-top {
+        width: 2px;
+        height: 20px;
+        background-color: #D1D1D6;
+    }
+
+    .org-connector-vertical-small-bottom {
+        width: 2px;
+        height: 30px;
+        /* Connects L2 to L3-span if needed */
+        background-color: #D1D1D6;
+    }
+
+    .org-connector-vertical-mid {
+        width: 2px;
+        height: 20px;
+        background-color: #D1D1D6;
+        margin: 0 auto;
+    }
+
+    /* Branch Wrappers */
+    .org-branch-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Horizontal Spans */
+    .org-connector-horizontal-span {
+        height: 2px;
+        background-color: #D1D1D6;
+        margin-bottom: 0;
+        /* Just a line */
+    }
+
+    /* Specific Widths for Horizontal Spans - Needs Manual Tuning or JS, 
+   but for fixed layout we can approximate or use specific per-group widths */
+    .org-connector-horizontal-span.two-nodes {
+        width: 260px;
+        /* Approx width to span the two nodes below */
+    }
+
+    .org-connector-horizontal-span.four-nodes {
+        width: 80%;
+        /* Span across the 4 nodes */
+        max-width: 900px;
+    }
+
+    .org-level-row {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        /* Connecting lines come from top of nodes to the span above */
+    }
+
+    .org-level-row.wrap-mobile {
+        gap: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .org-level-row.wrap-mobile {
+            flex-wrap: wrap;
+        }
+
+        .org-connector-horizontal-span.four-nodes {
+            display: none;
+            /* Hide complex horizontal lines on mobile wrap */
+        }
+
+        .org-connector-vertical-small-top {
+            display: none;
+            /* Hide connectors on mobile stack */
+        }
+
+        /* Stack cards vertically with small spacing */
+        .org-node-wrapper {
+            margin-bottom: 16px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .org-connector-horizontal-span.two-nodes {
+            display: none;
+        }
+
+        .org-level-row {
+            flex-direction: column;
+        }
+
+        /* Add vertical arrows/lines between stacked items if desired, or keep clean */
+    }
+
+    /* === ORG CHART Extra Styles === */
+
+    .org-card-v2.special-role {
+        background: #424245;
+        color: white;
+        min-width: 200px;
+        border: none;
+    }
+
+    .org-card-v2.special-role .org-role {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .org-card-v2.special-role .org-name {
+        color: white;
+    }
+
+    .org-peer-connector {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        /* Width of the spacer */
+        height: 2px;
+        background: #D1D1D6;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .org-connector-horizontal-peer {
+        width: 40px;
+        height: 2px;
+        background: #D1D1D6;
+        align-self: center;
+    }
+
+    .org-connector-horizontal-span.wide-span {
+        width: 90%;
+        max-width: 1000px;
+    }
+
+    .org-level-row.wrap-7 {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+    }
+
+    /* Ensure connectors look right when wrapped */
+    @media (max-width: 1100px) {
+        .org-connector-horizontal-span.wide-span {
+            display: none;
+            /* Hide large horizontal line on smaller screens */
+        }
+
+        .org-level-row.wrap-7 .org-connector-vertical-small-top {
+            display: none;
+        }
+
+        .org-level-row.wrap-7 .org-node-wrapper {
+            margin-bottom: 20px;
+        }
+    }
